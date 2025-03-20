@@ -1,5 +1,6 @@
 #include <fstream>
 #include <iostream>
+#include <iomanip>
 
 double slice(double x)
 {
@@ -36,8 +37,8 @@ int main()
     {     
     sum = sum + slice(val);
     mean = sum / lineCount;
-    std::cout << int(lineCount) << " " << mean << std::endl;
-    fout << int(lineCount) << " " << mean << std::endl;
+    std::cout << int(lineCount) << " " << std::setprecision(16) << std::scientific << mean << std::endl;
+    fout << int(lineCount) << " " << std::setprecision(16) << std::scientific <<mean << std::endl;
     ++lineCount;
 
 }
